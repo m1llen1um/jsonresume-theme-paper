@@ -15,11 +15,6 @@
       {{#resume.basics}}
         <header>
           <div class="header-content">
-            {{#if picture}}
-              <div class="header-pic">
-                <img src="{{picture}}" class="pic" />
-              </div>
-            {{/if}}
             <div class="header-text">
               <p>
                 {{name}}
