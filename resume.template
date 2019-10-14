@@ -19,22 +19,21 @@
               <p>
                 {{name}}
               </p>
-              <p class="subtitle">{{label}}</p>
             </div>
           </div>
         </header>
         <div class="content-wrapper">
-          <!-- CONTACT -->
+          <!-- SUMMARY -->
           <section class="content">
             <div class="row">
               <div class="content-cat">
-                Contact
+                Summary
               </div>
               <div class="content-text">
                 {{#if website}}
                   <ul>
-                    <li>Website</li>
-                    <li>{{website}}</li>
+                    <li/>
+                    <li>{{summary}}</li>
                   </ul>
                 {{/if}}
                 {{#if email}}
@@ -54,7 +53,6 @@
           </section>
           <!-- LOCATION -->
           {{#location}}
-            {{#ifCond address '||' city}}
               <section class="content">
                 <div class="row">
                   <div class="content-cat">
@@ -63,28 +61,12 @@
                   <div class="content-text">
                     {{#if address}}
                       <ul>
-                        <li>Address</li>
                         <li>{{address}}</li>
-                      </ul>
-                    {{/if}}
-                    {{#if city}}
-                      {{#if postalCode}}
-                        <ul>
-                          <li>Postal Code & City</li>
-                          <li>{{postalCode}} {{city}}</li>
-                        </ul>
-                      {{/if}}
-                    {{/if}}
-                    {{#if region}}
-                      <ul>
-                        <li>Region</li>
-                        <li>{{region}}</li>
                       </ul>
                     {{/if}}
                   </div>
                 </div>
               </section>
-            {{/ifCond}}
           {{/location}}
       {{/resume.basics}}
         
@@ -130,11 +112,6 @@
                       {{/ifCond}}
                       {{#if summary}}
                         <p>{{summary}}</p>
-                      {{/if}}
-                      {{#if highlights.length}}
-                        {{#each highlights}}
-                          <p class="highlight">{{.}}</p>
-                        {{/each}}
                       {{/if}}
                     </div>
                   </div>
@@ -199,14 +176,6 @@
                           <p class="heading">{{institution}}</p>
                         {{/if}}
                       {{/if}}
-                      {{#if area}}
-                        <p class="highlight">
-                          {{#if studyType}}
-                          {{studyType}}:
-                          {{/if}}
-                          <i>{{area}} {{#if gpa}}({{gpa}}){{/if}}</i>
-                        </p>
-                      {{/if}}
                     </div>
                   </div>
                 </section>
@@ -257,9 +226,6 @@
                         </strong>
                       {{/if}}
                     </span>
-                    {{#if level}}
-                      <span>({{level}}):</span>
-                    {{/if}}
                     {{#if keywords.length}}
                       {{#commalist keywords}}{{.}}{{/commalist}}
                     {{/if}}
@@ -293,29 +259,6 @@
             </section>
           {{/if}}
           {{#resume.basics}}
-            <!-- PROFILES -->
-            {{#if profiles.length}}
-              <section class="content profiles">
-                <div class="row">
-                  <div class="content-cat">
-                    Profiles
-                  </div>
-                  <div class="content-text profiles-listing">
-                    <ul>
-                      {{#each profiles}}
-                        {{#if network}}
-                          <li>
-                            <a href="{{url}}" target="_blank">
-                              {{network}}
-                            </a>
-                          </li>
-                        {{/if}}
-                      {{/each}}
-                    </ul>
-                  </div>
-                </div>
-              </section>
-            {{/if}}
           {{/resume.basics}}
 
           {{#if resume.interests.length}}

@@ -1,7 +1,7 @@
 body, html {
   padding-top:2.5em;
   margin:0;
-  background-color:#fafafa;
+  background-color:#ffffff;
 }
 
 .note {
@@ -20,7 +20,6 @@ body, html {
   border: 1px solid #757575;
   padding: 1px;
   border-radius: 4px;
-
 }
 
 /* Header */
@@ -39,14 +38,13 @@ header {
 .pic {
   margin: 0 auto;
   margin-top:-2.5em;
-  
+
   border-radius:10em;
   height:4em;
   width:4em;
-  
+
   border: 2px solid #e0e0e0;
   transition : all 0.5s linear;
-  
 }
 
 @-webkit-keyframes wiggle {
@@ -67,9 +65,9 @@ header {
 .pic:hover {
   /*Webkit fix*/
   -webkit-transform: translateZ(0);
-  
+
   cursor:pointer;
-  
+
   -webkit-animation: wiggle 0.7s cubic-bezier(0.6, -0.28, 0.735, 0.045);
 }
 
@@ -81,9 +79,9 @@ header {
 header p {
   text-align:center;
   font-family: "Merriweather";
-  
+
   margin:0;
-  
+
   color: #212121;
 }
 
@@ -104,16 +102,13 @@ header p {
 .paper {
   margin: 0 auto;
   margin-bottom:1em;
-  
   background-color:white;
   width:60%;
-  
   padding:0.5em 0 0.5em 0;
-  
-  border-top: 1px solid #e0e0e0;
-  border-left: 1px solid #e0e0e0;
-  border-right: 1px solid #e0e0e0;
-  border-bottom: 3px solid #e0e0e0;
+  border-top: 0px solid #e0e0e0;
+  border-left: 0px solid #e0e0e0;
+  border-right: 0px solid #e0e0e0;
+  border-bottom: 0px solid #e0e0e0;
   border-radius:3px;
 }
 
