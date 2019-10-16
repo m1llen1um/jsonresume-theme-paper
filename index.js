@@ -1,4 +1,5 @@
 var fs = require("fs");
+var _ = require('lodash')
 var Handlebars = require("handlebars");
 
 function render(resume) {
@@ -7,6 +8,20 @@ function render(resume) {
     var template = fs.readFileSync(__dirname + "/resume.template", "utf-8");
     // Load print-specific css
     var print = fs.readFileSync(__dirname + "/css/print.css", "utf-8");
+
+	_.each(resume.work, function(w){
+		w.startDate = w.startDate.substr(0,7);
+		if(w.endDate) {
+			w.endDate = w.endDate.substr(0,7);
+		}
+	});
+
+	_.each(resume.education, function(w){
+		w.startDate = w.startDate.substr(0,7);
+		if(w.endDate) {
+			w.endDate = w.endDate.substr(0,7);
+		}
+	});
 
     // Register custom handlebars extensions ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
     // foreach loops //

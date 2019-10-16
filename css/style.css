@@ -1,5 +1,5 @@
 body, html {
-  padding-top:2.5em;
+  padding-top:1.2em;
   margin:0;
   background-color:#ffffff;
 }
@@ -138,7 +138,7 @@ header p {
 }
 
 body > div > article > div > section:last-child {
-  padding-bottom:1.5em;
+  padding-bottom:1.2em;
 }
 
 .row {
